@@ -2,7 +2,7 @@
 
 This component runs on a Raspberry Pi and is responsible for reading data from sensors and sending it to the MQTT broker (ThingsBoard).
 
-## 📦 Structure
+## Structure
 
 - `main.cpp`: Entry point, handles main loop and publishing.
 - `client.cpp/h`: MQTT connection and publishing logic.
@@ -10,20 +10,20 @@ This component runs on a Raspberry Pi and is responsible for reading data from s
 - `app/`: May contain additional resources or configurations.
 - `Makefile`: Build instructions.
 
-## ⚙️ Build
+## Build
 
 ```bash
 make
 ```
 
-## 📡 How It Works
+## How It Works
 
 1. Initializes sensors and MQTT client.
 2. Reads sensor data periodically.
 3. Converts data to JSON format.
 4. Publishes to a configured MQTT topic (e.g., `v1/devices/me/telemetry` for ThingsBoard).
 
-## 🔄 Dependencies
+## Dependencies
 
 - MQTT client libraries (e.g., Paho, Mosquitto)
 - WiringPi or I2C libraries for sensor communication
